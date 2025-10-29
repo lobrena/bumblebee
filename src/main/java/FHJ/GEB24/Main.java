@@ -13,5 +13,29 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        int[] numbers = {5, 3, 8, 2, 1};
+        BubbleSort(numbers);
+
+        // Ausgabe
+        for (int n : numbers) {
+            System.out.print(n + " ");
+        }
+
+    }
+    // AUFGABE 1
+    public static void BubbleSort(int[]a){
+        boolean swapped;
+        do {
+            swapped = false;
+            for (int i = 0; i < a.length - 1; i ++){
+                if (a[i] > a[i+1]){
+                    int t = a[i]; a[i] = a[i + 1]; a[i + 1] = t;
+                    swapped = true;
+                }
+            }
+
+        }
+        while (swapped);
     }
 }
